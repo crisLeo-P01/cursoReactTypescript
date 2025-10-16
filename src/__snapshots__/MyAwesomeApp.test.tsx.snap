@@ -1,0 +1,30 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > Crear un snapshot de MyAwesomeApp 1`] = `
+<div>
+  <div>
+    <h1
+      data-testid="first-name-title"
+    >
+      Cristian
+    </h1>
+    <h3>
+      Paiva
+    </h3>
+    <p
+      class="p-favorita"
+      style="font-size: 16px; color: rgb(22, 22, 22); background-color: rgb(241, 241, 241); padding: 5px 20px; border-radius: 20px;"
+    >
+      ETS2, Grand Thead Auto V, Cyberpunk
+    </p>
+    <h3
+      style="background-color: red; color: white; font-size: 18px; padding: 10px 20px; border-radius: 20px;"
+    >
+      No activo
+    </h3>
+    <p>
+      {"zipCode":"ABC-123","country":"Argentina"}
+    </p>
+  </div>
+</div>
+`;

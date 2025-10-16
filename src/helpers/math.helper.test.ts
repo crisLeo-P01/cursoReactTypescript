@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import { sumar } from './math.helper'
+import { sumar, restar, multiplicar, dividir } from './math.helper'
 import { describe } from 'node:test'
 
 describe('Prueba sumar', () => {
@@ -30,7 +30,7 @@ describe('Prueba restar', () => {
         const a = 10
         const b = 5
         
-        const result = a - b
+        const result = restar(a, b)
 
         expect(result).toBe(a - b)
     })
@@ -39,7 +39,7 @@ describe('Prueba restar', () => {
         const a = 2
         const b = -5
 
-        const result = a - b
+        const result = restar(a, b)
 
         expect(result).toBe(a - b)
     })
@@ -50,7 +50,7 @@ describe('Prueba multiplicar', () => {
         const a = 5
         const b = 4
 
-        const result = a * b
+        const result = multiplicar(a, b)
 
         expect(result).toBe(a * b)
     })
@@ -59,8 +59,19 @@ describe('Prueba multiplicar', () => {
         const a = 8
         const b = -2
 
-        const result = a * b
+        const result = multiplicar(a, b)
 
         expect(result).toBe(a * b)
+    })
+})
+
+describe('Prueba dividir', () => {
+    test('Divide dos números positivos', () => {
+        const a = 6
+        const b = 2
+
+        const result = dividir(a, b)
+
+        expect(result).toBe(a / b)
     })
 })

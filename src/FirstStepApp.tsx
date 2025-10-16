@@ -6,7 +6,7 @@ interface ItemInCart {
 }
 
 const itemsInCart: ItemInCart[] = [
-    {productName: 'Nintendo Switch', quantity: 2},
+    {productName: 'Nintendo Switch', quantity: 1},
     {productName: 'Xbox Series', quantity: 4},
     {productName: 'PlayStation 5', quantity: 1},
 ]

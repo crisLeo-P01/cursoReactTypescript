@@ -23,11 +23,11 @@ const estado: CSSProperties = {
 export function MyAwesomeApp() {
 
     return (
-        <>
-            <h1>{firstName}</h1>
+        <div>
+            <h1 data-testid="first-name-title">{firstName}</h1>
             <h3>{lastName}</h3>
 
-            <p style={{
+            <p className="p-favorita" style={{
                 fontSize: 16,
                 color: '#161616',
                 backgroundColor: '#f1f1f1',
@@ -38,6 +38,6 @@ export function MyAwesomeApp() {
             <h3 style={estado}>{isActive ? 'Activo' : 'No activo'}</h3>
 
             <p>{JSON.stringify(address)}</p>
-        </>
+        </div>
     )
 }
