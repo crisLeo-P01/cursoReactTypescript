@@ -1,3 +1,4 @@
+
 // Importaciones necesarias para testing con React Testing Library y Vitest
 import { render, screen } from "@testing-library/react";
 import { describe, expect, test, vi, afterEach } from "vitest";
@@ -5,7 +6,9 @@ import { FirstStepApp } from "./FirstStepApp";
 
 // mockItemCounter es una función simulada que reemplaza al componente real ItemCounter
 // Retorna un div simple con un atributo data-testid para facilitar su selección en las pruebas
-const mockItemCounter = vi.fn((props: unknown) => {
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const mockItemCounter = vi.fn((_props: unknown) => {
     return <div data-testid="ItemCounter" />
 });
 
@@ -66,3 +69,8 @@ describe('FirstStepApp', () => {
         expect(mockItemCounter).toHaveBeenCalledWith({ name: 'PlayStation 5', quantity: 1 })
     })
 })
+
+/*
+* Se recomienda usar screen porque refleja los cambios en la UI después de que se disparan
+* eventos, mientras que container no se actualiza y solo representa el estado inicial
+*/
